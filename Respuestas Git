@@ -1,0 +1,12 @@
+✔**1. ¿Cómo ves los archivos cambiados dentro de cada confirmación desde el registro de git?**
+El comando git diff se utiliza junto con git status y git log para analizar el estado actual de un repositorio de Git.       
+El comando git diff también tiene un modo especial para resaltar los cambios con un nivel de detalle muy superior: ‐‐color-words. Este modo tokeniza las líneas añadidas y eliminadas mediante espacios en blanco y luego muestra las comparaciones. Ahora, el resultado muestra solo las palabras coloreadas que han cambiado. 
+ Se usa diff para examinar qué cambios no se han confirmado, cómo se comparan las ediciones con el área de preparación y qué diferencias existen entre el historial de confirmación. El seguimiento de cambios es lo que hace Git: diff es el comando para ver cómo Git observa las modificaciones archivo por archivo
+
+✔**2. ¿Cómo ve el contenido de lo que cambió dentro de cada archivo del registro de git?*
+Para verificar el contenido de lo que cambió podemos utilizar el comando git log.
+Sirve para revisar rápidamente las confirmaciones y el historial de archivos versionados. También git-log nos proporciona parámetros(--before, --after, --since… ) para visualizar la bitacola en función del tiempo, por ejemplo. 
+✔**3. ¿A qué se refiere HEAD en el contexto de git? (No debe confundirse con el "HEAD<<<<" que se observe dentro del conflicto de fusión)**
+Normalmente, HEAD almacena el nombre de una rama, y los comandos que operan en el historial que HEAD representa operan en el historial que conduce a la punta de la rama a la que apunta HEAD.
+Una "rama" es una línea de desarrollo. La confirmación más reciente en una rama se conoce como la punta de esa rama. La punta de la rama está referenciada por una cabeza de rama , que avanza a medida que se realiza un desarrollo adicional en la rama. Un solo repositorio de Git puede rastrear un número arbitrario de ramas, pero su árbol de trabajo está asociado solo con una de ellas (la rama "actual" o "desprotegida"), y HEAD apunta a esa rama.
+El concepto de HEAD  refiere al commit en el que está tu repositorio posicionado en cada momento. Por regla general HEAD suele coincidir con el último commit de la rama en la que estés, ya que habitualmente estás trabajando en lo último. Pero si te mueves hacia cualquier otro commit anterior entonces el HEAD estará más atrás.
